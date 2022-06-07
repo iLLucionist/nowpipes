@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/maximl/Projects/python/nowpipes/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Adding entire modules	README.md	/^### Adding entire modules$/;"	S	section:NOWPIPES""Features
+Automatic dependency resolution	README.md	/^### Automatic dependency resolution$/;"	S	section:NOWPIPES""Features
+Building a data pipe line using decorators	README.md	/^### Building a data pipe line using decorators$/;"	S	section:NOWPIPES""Features
+Features	README.md	/^## Features$/;"	s	chapter:NOWPIPES
+NOWPIPES	README.md	/^# NOWPIPES$/;"	c
+Pipeline	nowpipes/main.py	/^class Pipeline:$/;"	c
+Results are automatically collected.	README.md	/^### Results are automatically collected.$/;"	S	section:NOWPIPES""Features
+__getattr__	nowpipes/main.py	/^    def __getattr__(self, key):$/;"	m	class:Pipeline
+__getitem__	nowpipes/main.py	/^    def __getitem__(self, key):$/;"	m	class:Pipeline
+__init__	nowpipes/main.py	/^    def __init__(self):$/;"	m	class:Pipeline
+__version__	nowpipes/__init__.py	/^__version__ = '0.1.0'$/;"	v
+_add_dependencies	nowpipes/main.py	/^    def _add_dependencies(self, name, dependencies):$/;"	m	class:Pipeline
+_add_function	nowpipes/main.py	/^    def _add_function(self, func):$/;"	m	class:Pipeline
+_add_module	nowpipes/main.py	/^    def _add_module(self, mod):$/;"	m	class:Pipeline
+_getresults	nowpipes/main.py	/^    def _getresults(self, key):$/;"	m	class:Pipeline
+_resolve_dependencies	nowpipes/main.py	/^    def _resolve_dependencies(self):$/;"	m	class:Pipeline
+_run_analysis	nowpipes/main.py	/^    def _run_analysis(self, name, **params):$/;"	m	class:Pipeline
+add	nowpipes/main.py	/^    def add(self, *args):$/;"	m	class:Pipeline
+analysis	example.py	/^analysis = Analysis()$/;"	v
+analysis1	my_module.py	/^def analysis1(data, **params):$/;"	f
+analysis2	my_module.py	/^def analysis2(data, **params):$/;"	f
+config	nowpipes/main.py	/^    def config(self, **kwargs):$/;"	m	class:Pipeline
+data	my_module.py	/^def data(**params):$/;"	f
+deps	example.py	/^deps = analysis._resolve_dependencies()$/;"	v
+index	snippets.py	/^    index = deps.index( dep )$/;"	v
+inner	nowpipes/main.py	/^    def inner(*args, **kwargs):$/;"	f	function:pipe	file:
+insert_after	snippets.py	/^        insert_after = index$/;"	v
+insert_after	snippets.py	/^insert_after = 0$/;"	v
+isanalysis	nowpipes/main.py	/^def isanalysis(x):$/;"	f
+module_to_dict	nowpipes/main.py	/^def module_to_dict(module): return dict(getmembers(module, isfunction))$/;"	f
+more	my_module.py	/^def more(analysis1, analysis2, multiply, **params):$/;"	f
+multiply	my_module.py	/^def multiply(analysis1, analysis2, **params):$/;"	f
+pipe	nowpipes/main.py	/^def pipe(func):$/;"	f
+run	nowpipes/main.py	/^    def run(self, analysis=None, verbose=False, indent=0, run_once=(),$/;"	m	class:Pipeline
+test_version	tests/test_nowpipes.py	/^def test_version():$/;"	f

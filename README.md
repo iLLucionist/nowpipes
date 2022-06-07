@@ -49,6 +49,7 @@ at: `_resolve_dependencies()`.
   on the other hand). Additional parameters *must* be specified to the
   `run`-function in your pipeline as additional named optional arguments, e.g.:
 
+```python
     # The pipeline mypipe = Analysis() analysis.add(func1, func2, func3)
 
     # Either: data.config( param="my parameter value")
@@ -57,6 +58,7 @@ at: `_resolve_dependencies()`.
 
     # ..somewhere where the funcs are you can then get it @analysis def
     func3(func1, func2, **params): print(params.param)
+```
 
 * Be able to dynamically add and remove dependencies. Currently, you cannot
   dynamically (e.g., `ipython`) swap older functions for newer functions in the

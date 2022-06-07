@@ -40,3 +40,27 @@ work.
 To inspect how the dependencies are internally resolved, you can take a look
 at: `_resolve_dependencies()`.
 
+## Planned Features
+
+* There is one nasty bug: don't specify additional arguments to decorated
+  functions that are not dependencies. In scanning for dependencies, it will
+  not be able to find it and get stuck. If you try to run the data pipeline and
+  it hangs, check dependency names (functions on one hand and named arguments
+  on the other hand). Additional parameters *must* be specified to the
+  `run`-function in your pipeline as additional named optional arguments, e.g.:
+
+    # The pipeline mypipe = Analysis() analysis.add(func1, func2, func3)
+
+    # Either: data.config( param="my parameter value")
+
+    # Or... data.run(..., param="my parameter value")
+
+    # ..somewhere where the funcs are you can then get it @analysis def
+    func3(func1, func2, **params): print(params.param)
+
+* Be able to dynamically add and remove dependencies. Currently, you cannot
+  dynamically (e.g., `ipython`) swap older functions for newer functions in the
+  pipeline when they are already defined (they are cached). So if you changed
+  functions in the pipeline, you need to reload, reimport the functions and
+  redefine the pipeline.
+

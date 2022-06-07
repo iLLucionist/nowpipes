@@ -50,14 +50,19 @@ at: `_resolve_dependencies()`.
   `run`-function in your pipeline as additional named optional arguments, e.g.:
 
 ```python
-    # The pipeline mypipe = Analysis() analysis.add(func1, func2, func3)
+    # The pipeline
+    mypipe = Analysis() analysis.add(func1, func2, func3)
 
-    # Either: data.config( param="my parameter value")
+    # Either:
+    data.config(..., param="my parameter value")
 
-    # Or... data.run(..., param="my parameter value")
+    # Or...
+    data.run(..., param="my parameter value")
 
-    # ..somewhere where the funcs are you can then get it @analysis def
-    func3(func1, func2, **params): print(params.param)
+    # ..somewhere where the funcs are you can then get it
+    @analysis 
+    def func3(func1, func2, **params):
+    print(params.param)
 ```
 
 * Be able to dynamically add and remove dependencies. Currently, you cannot
